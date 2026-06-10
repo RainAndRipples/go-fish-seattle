@@ -1,0 +1,162 @@
+.spots-page {
+  padding-top: 2rem;
+}
+
+.spots-title {
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  color: var(--blue-dark);
+  text-align: center;
+}
+
+.spots-intro {
+  text-align: center;
+  color: #5a7185;
+  margin: 0.4rem 0 1.75rem;
+  font-size: 1.05rem;
+}
+
+.spots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+
+/* ── Card ── */
+.spot-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.spot-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: white;
+  position: relative;
+}
+
+.spot-header--green { background: linear-gradient(135deg, #2e7d32, #66bb6a); }
+.spot-header--blue  { background: linear-gradient(135deg, #1266cc, #00bcd4); }
+
+.spot-emoji {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.spot-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.1rem;
+}
+
+.spot-location {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.spot-type-badge {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.badge--green { background: rgba(255,255,255,0.25); color: white; }
+.badge--blue  { background: rgba(255,255,255,0.25); color: white; }
+
+/* ── Body ── */
+.spot-body {
+  padding: 1.1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.spot-section h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: var(--blue-dark);
+}
+
+.spot-section p {
+  font-size: 0.92rem;
+  color: #3a5068;
+  line-height: 1.5;
+}
+
+.catch-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.catch-list li {
+  background: #e8f5fd;
+  color: var(--blue-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+}
+
+.spot-tip {
+  background: #fffde7;
+  border-left: 4px solid var(--yellow);
+  padding: 0.6rem 0.85rem;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.88rem;
+  color: #4a3800;
+  line-height: 1.45;
+}
+
+.spot-parent-info {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+
+.spot-parent-info h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: #444;
+}
+
+.spot-parent-info p {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ── WDFW note ── */
+.spots-wdfw-note {
+  margin-top: 2rem;
+  background: #fff3e0;
+  border: 2px solid #ff6f00;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: #4a2800;
+}
+
+.spots-wdfw-note a {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .spots-grid {
+    grid-template-columns: 1fr;
+  }
+}
