@@ -64,6 +64,13 @@ A free, kid-friendly website teaching kids ages 8–10 how to start fishing in t
    - Note that catch record cards (required for salmon/steelhead) come from the same place
    - DO NOT hardcode any prices — verify current details on wdfw.wa.gov when building
 
+## Marketing (after v2 — not building yet)
+- Post in local parent Facebook groups and Reddit (r/Seattle, r/seattleparents)
+- Print QR cards for local tackle shops to display
+- Pitch to ParentMap and Seattle's Child
+- SEO pass on all pages
+- No paid ads initially
+
 ## Parked (do NOT build unless asked)
 - Gear/shopping page and Amazon affiliate links (planned much later)
 - User accounts, databases, comment features, community submissions
