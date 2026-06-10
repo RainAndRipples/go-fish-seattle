@@ -50,6 +50,12 @@ A free, kid-friendly website teaching kids ages 8–10 how to start fishing in t
 3. "Suggest a spot" mailto link
 4. "Where Should I Fish Today?" page using the free Open-Meteo API
 5. Phone-size polish pass
+6. New page: "Clams & Shellfish" — kid-friendly intro to shellfishing in WA (razor clams + Puget Sound clams/oysters). Same style: 3rd-grade reading level, big text, fun.
+   - MUST include a prominent "check before you go" section linking to:
+     - WDFW razor clam updates (wdfw.wa.gov)
+     - WA Dept of Health Shellfish Safety Map (https://fortress.wa.gov/doh/biotoxin/biotoxin.aspx)
+   - NEVER state that any beach is currently open — teach families to check live sources every time
+   - Verify current license rules for adults vs kids on wdfw.wa.gov before building (do not assume)
 
 ## Parked (do NOT build unless asked)
 - Gear/shopping page and Amazon affiliate links (planned much later)
