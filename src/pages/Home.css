@@ -1,0 +1,166 @@
+/* ── Hero ── */
+.hero {
+  position: relative;
+  background: linear-gradient(160deg, #1266cc 0%, #00bcd4 100%);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem 6rem;
+  overflow: hidden;
+}
+
+.hero-waves {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  width: 120%;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.wave1 {
+  background: rgba(255,255,255,0.12);
+  bottom: -10px;
+  animation: sway 5s ease-in-out infinite;
+}
+
+.wave2 {
+  background: var(--bg);
+  bottom: -30px;
+  animation: sway 7s ease-in-out infinite reverse;
+}
+
+@keyframes sway {
+  0%,100% { transform: translateX(0); }
+  50%      { transform: translateX(3%); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-fish {
+  font-size: 5rem;
+  animation: bob 3s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  margin: 0.25rem 0;
+  text-shadow: 2px 3px 0px rgba(0,0,0,0.18);
+}
+
+.hero-sub {
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  font-weight: 600;
+  margin: 0.75rem 0 1.75rem;
+  opacity: 0.92;
+}
+
+.hero-cta {
+  font-size: 1.25rem;
+  padding: 0.85rem 2.2rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+}
+
+/* ── Cards ── */
+.home-cards {
+  padding-top: 2.5rem;
+}
+
+.section-heading {
+  font-size: 1.9rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+  color: var(--blue-dark);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.home-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.home-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+  text-decoration: none;
+}
+
+.home-card-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.home-card h3 {
+  font-size: 1.35rem;
+  margin: 0.25rem 0 0.1rem;
+}
+
+.home-card p {
+  font-size: 0.9rem;
+  color: #5a7185;
+  margin-bottom: 0.75rem;
+  flex: 1;
+}
+
+.home-card .btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem;
+  width: 100%;
+  justify-content: center;
+}
+
+/* ── Fun fact ── */
+.fun-fact {
+  padding-bottom: 2rem;
+}
+
+.fun-fact-inner {
+  background: var(--yellow);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.fun-fact-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

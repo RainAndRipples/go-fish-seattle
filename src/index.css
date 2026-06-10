@@ -1,0 +1,89 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue:    #1e90ff;
+  --blue-dark: #1266cc;
+  --teal:    #00bcd4;
+  --green:   #4caf50;
+  --orange:  #ff6f00;
+  --yellow:  #ffd600;
+  --red:     #f44336;
+  --white:   #ffffff;
+  --bg:      #e8f5fd;
+  --text:    #1a2e45;
+  --card-bg: #ffffff;
+  --shadow:  0 4px 16px rgba(0,0,0,0.10);
+  --radius:  18px;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Fredoka One', cursive;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border: none;
+  border-radius: 999px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.12s, box-shadow 0.12s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  text-decoration: none;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-blue   { background: var(--blue);   color: var(--white); }
+.btn-green  { background: var(--green);  color: var(--white); }
+.btn-orange { background: var(--orange); color: var(--white); }
+.btn-teal   { background: var(--teal);   color: var(--white); }
+.btn-yellow { background: var(--yellow); color: var(--text);  }
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
