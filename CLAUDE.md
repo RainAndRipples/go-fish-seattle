@@ -56,6 +56,13 @@ A free, kid-friendly website teaching kids ages 8–10 how to start fishing in t
      - WA Dept of Health Shellfish Safety Map (https://fortress.wa.gov/doh/biotoxin/biotoxin.aspx)
    - NEVER state that any beach is currently open — teach families to check live sources every time
    - Verify current license rules for adults vs kids on wdfw.wa.gov before building (do not assume)
+7. Licensing links: add a "Get your license" section to the Rules page + a footer link
+   - Kids 14 and under fish free — celebrate this prominently
+   - At 15, a youth license is required — link to fishhunt.wa.gov
+   - Adults link to fishhunt.wa.gov for license purchase
+   - Mention the combo license covers shellfish too
+   - Note that catch record cards (required for salmon/steelhead) come from the same place
+   - DO NOT hardcode any prices — verify current details on wdfw.wa.gov when building
 
 ## Parked (do NOT build unless asked)
 - Gear/shopping page and Amazon affiliate links (planned much later)
