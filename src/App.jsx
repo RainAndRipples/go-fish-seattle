@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import LearnToFish from './pages/LearnToFish'
 import FishingSpots from './pages/FishingSpots'
+import FreshwaterSpots from './pages/FreshwaterSpots'
 import PugetSound from './pages/PugetSound'
 import FishID from './pages/FishID'
 import Rules from './pages/Rules'
@@ -18,7 +19,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<LearnToFish />} />
-        <Route path="/lakes" element={<FishingSpots />} />
+        <Route path="/lakes" element={<FreshwaterSpots />} />
         <Route path="/sound" element={<PugetSound />} />
         <Route path="/fish-id" element={<FishID />} />
         <Route path="/rules" element={<Rules />} />

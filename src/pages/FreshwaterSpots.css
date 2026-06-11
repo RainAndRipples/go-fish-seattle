@@ -1,0 +1,321 @@
+.lakes-page {
+  padding-bottom: 3rem;
+}
+
+/* ── Page header ── */
+.lakes-hero {
+  text-align: center;
+  padding: 2rem 1rem 1.25rem;
+}
+
+.lakes-title {
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  color: var(--blue-dark);
+}
+
+.lakes-intro {
+  color: #5a7185;
+  margin: 0.4rem 0 0;
+  font-size: 1rem;
+}
+
+/* ── Region filter ── */
+.lakes-filter {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 1rem 1.5rem;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: white;
+  border: 2px solid #d0dce8;
+  border-radius: 999px;
+  padding: 0.45rem 1.1rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover {
+  border-color: var(--blue);
+  color: var(--blue-dark);
+}
+
+.filter-btn--active {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  color: white;
+}
+
+.filter-count {
+  background: rgba(0,0,0,0.12);
+  border-radius: 999px;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.filter-btn--active .filter-count {
+  background: rgba(255,255,255,0.25);
+}
+
+/* ── Spot cards grid ── */
+.spots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Individual card ── */
+.spot-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.spot-card--eastside .spot-header      { background: linear-gradient(135deg, #1b5e20, #43a047); }
+.spot-card--seattle-south .spot-header { background: linear-gradient(135deg, #1266cc, #00bcd4); }
+
+.spot-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: white;
+}
+
+.spot-emoji {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.spot-header-text {
+  min-width: 0;
+}
+
+.spot-name {
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin-bottom: 0.1rem;
+}
+
+.spot-location {
+  font-size: 0.82rem;
+  opacity: 0.9;
+}
+
+/* ── Card body ── */
+.spot-body {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.spot-section-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 0.35rem;
+}
+
+.catch-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.catch-list li {
+  background: #e3f2fd;
+  color: var(--blue-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.18rem 0.65rem;
+  border-radius: 999px;
+}
+
+.spot-best-for {
+  font-size: 0.92rem;
+  color: #2e4a28;
+  background: #e8f5e9;
+  border-radius: 10px;
+  padding: 0.6rem 0.85rem;
+  line-height: 1.4;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.spot-card--seattle-south .spot-best-for {
+  color: #1a3250;
+  background: #e3f2fd;
+}
+
+.spot-tip {
+  background: #fffde7;
+  border-left: 4px solid var(--yellow);
+  padding: 0.55rem 0.85rem;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.86rem;
+  color: #4a3800;
+  line-height: 1.45;
+}
+
+/* ── Facilities ── */
+.spot-facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.facility-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #f5f7fa;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.78rem;
+  color: #5a6a7a;
+  font-weight: 600;
+}
+
+/* ── Parent info ── */
+.spot-parent-info {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.84rem;
+  color: #555;
+  line-height: 1.5;
+  margin-top: auto;
+}
+
+/* ── Action buttons ── */
+.spot-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.spot-btn {
+  flex: 1;
+  display: block;
+  text-align: center;
+  padding: 0.55rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.spot-btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.spot-btn--maps {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 2px solid #a5d6a7;
+}
+
+.spot-btn--maps:hover { background: #c8e6c9; }
+
+.spot-btn--wdfw {
+  background: #fff3e0;
+  color: #e65100;
+  border: 2px solid #ffcc80;
+}
+
+.spot-btn--wdfw:hover { background: #ffe0b2; }
+
+/* ── Suggest a spot ── */
+.spots-suggest {
+  margin-top: 2rem;
+  background: linear-gradient(135deg, #e3f2fd, #f0f8ff);
+  border: 2px solid var(--blue);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+}
+
+.spots-suggest-label {
+  font-size: 0.9rem;
+  color: #5a7185;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.spots-suggest-heading {
+  font-size: 1.4rem;
+  color: var(--blue-dark);
+  margin-bottom: 1rem;
+}
+
+.btn-suggest {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.btn-suggest:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  color: white;
+}
+
+/* ── WDFW disclaimer ── */
+.spots-wdfw-note {
+  margin-top: 1.5rem;
+  background: #fff3e0;
+  border: 2px solid #ff6f00;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: #4a2800;
+}
+
+.spots-wdfw-note a {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .spots-grid {
+    grid-template-columns: 1fr;
+  }
+  .filter-btn {
+    font-size: 0.82rem;
+    padding: 0.4rem 0.9rem;
+  }
+}
