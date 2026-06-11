@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import './ClamShellfish.css'
 
 const shellfish = [
@@ -51,6 +52,14 @@ const shellfish = [
 export default function ClamShellfish() {
   return (
     <div className="page clam-page">
+      <Helmet>
+        <title>Clams &amp; Shellfish — Go Fish Seattle!</title>
+        <meta name="description" content="Kid-friendly intro to clamming and shellfishing in Washington state. Razor clams, Manila clams, and Olympia oysters — with a prominent safety guide and links to check open beaches before every trip." />
+        <meta property="og:title" content="Clams &amp; Shellfish — Go Fish Seattle!" />
+        <meta property="og:description" content="Dig razor clams and find oysters in WA! Kid-friendly guide with beach safety links — always check before you go." />
+        <meta property="og:image" content="https://go-fish-seattle.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <h1 className="clam-title">🦀 Clams &amp; Shellfish</h1>
       <p className="clam-intro">
         Washington has some of the best clamming and shellfishing in the country!

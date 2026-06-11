@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import './Rules.css'
 
 const rules = [
@@ -48,6 +49,14 @@ const rules = [
 export default function Rules() {
   return (
     <div className="page rules-page">
+      <Helmet>
+        <title>Fishing Rules for Kids — Go Fish Seattle!</title>
+        <meta name="description" content="Kids 14 and under fish FREE in Washington state — no license needed! Simple plain-language rules for young anglers: catch limits, catch-and-release tips, and how to get a license when you turn 15." />
+        <meta property="og:title" content="Fishing Rules for Kids — Go Fish Seattle!" />
+        <meta property="og:description" content="Kids 14 and under fish free in WA! No license, no hassle. Simple rules every young angler should know." />
+        <meta property="og:image" content="https://go-fish-seattle.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <h1 className="rules-title">📋 Rules for Kids</h1>
       <p className="rules-intro">Fishing has a few simple rules. Follow them and everyone (including the fish!) has a great time.</p>
 

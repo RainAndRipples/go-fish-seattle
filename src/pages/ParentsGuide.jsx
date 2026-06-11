@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import './ParentsGuide.css'
 
 const sections = [
@@ -83,6 +84,14 @@ const colorMap = {
 export default function ParentsGuide() {
   return (
     <div className="page parents-page">
+      <Helmet>
+        <title>Parent's Guide to Fishing with Kids — Go Fish Seattle!</title>
+        <meta name="description" content="Real-talk advice for parents taking kids fishing for the first time. Set the right expectations, keep trips short, handle tangles without drama, and make sure they want to come back — even if you don't catch anything." />
+        <meta property="og:title" content="Parent's Guide to Fishing with Kids" />
+        <meta property="og:description" content="Honest advice for parents: fun over fish, keep it short, handle the inevitable tangle, and end every trip well." />
+        <meta property="og:image" content="https://go-fish-seattle.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <h1 className="parents-title">👨‍👩‍👧 Parent's Guide</h1>
       <p className="parents-subtitle">The real-talk version — for the adult in the car</p>
 

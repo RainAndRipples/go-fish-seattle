@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import LearnToFish from './pages/LearnToFish'
 import FishingSpots from './pages/FishingSpots'
@@ -12,7 +12,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,6 +25,6 @@ export default function App() {
         <Route path="/parents" element={<ParentsGuide />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </>
   )
 }

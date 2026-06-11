@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import './WeatherFish.css'
 
 const LAT = 47.6062
@@ -88,6 +89,17 @@ const PICKS = [
   },
 ]
 
+const weatherHelmet = (
+  <Helmet>
+    <title>Where Should I Fish Today? — Go Fish Seattle!</title>
+    <meta name="description" content="Live Seattle weather and top fishing spot recommendations for today. We check the conditions and tell you exactly where to take the kids fishing — updated every time you load the page." />
+    <meta property="og:title" content="Where Should I Fish Today? — Go Fish Seattle!" />
+    <meta property="og:description" content="Live Seattle weather + top fishing spot picks for today. Should you go? We'll tell you!" />
+    <meta property="og:image" content="https://go-fish-seattle.vercel.app/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </Helmet>
+)
+
 export default function WeatherFish() {
   const [weather, setWeather] = useState(null)
   const [error, setError] = useState(false)
@@ -106,6 +118,7 @@ export default function WeatherFish() {
   if (error) {
     return (
       <div className="page weather-page">
+        {weatherHelmet}
         <h1 className="weather-title">🌤️ Where Should I Fish Today?</h1>
         <div className="weather-error">
           <p>😬 Couldn't load the weather right now. Try refreshing!</p>
@@ -118,6 +131,7 @@ export default function WeatherFish() {
   if (!weather) {
     return (
       <div className="page weather-page">
+        {weatherHelmet}
         <h1 className="weather-title">🌤️ Where Should I Fish Today?</h1>
         <div className="weather-loading">
           <div className="weather-loading-spinner" aria-hidden="true">🎣</div>
@@ -136,6 +150,7 @@ export default function WeatherFish() {
 
   return (
     <div className="page weather-page">
+      {weatherHelmet}
       <h1 className="weather-title">🌤️ Where Should I Fish Today?</h1>
       <p className="weather-subtitle">Live Seattle weather — updated every time you load the page</p>
 

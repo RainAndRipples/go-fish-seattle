@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import './FishingSpots.css'
 
 // TODO: replace with your real contact email before sharing the site
@@ -149,6 +150,14 @@ const typeColor = { lake: 'green', pier: 'blue', stream: 'teal' }
 export default function FishingSpots() {
   return (
     <div className="page spots-page">
+      <Helmet>
+        <title>12 Kid-Friendly Fishing Spots Near Seattle — Go Fish Seattle!</title>
+        <meta name="description" content="12 real, public fishing spots around Seattle, Renton, Kent, Maple Valley, and the Eastside — with what you might catch, why each one is great for kids, and parking + bathroom info for parents." />
+        <meta property="og:title" content="12 Kid-Friendly Fishing Spots Near Seattle" />
+        <meta property="og:description" content="Green Lake, Edmonds Pier, Cedar River, and 9 more — all with parking and bathroom info for parents." />
+        <meta property="og:image" content="https://go-fish-seattle.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <h1 className="spots-title">📍 Fishing Spots</h1>
       <p className="spots-intro">12 great places to fish near Seattle — all beginner-friendly!</p>
 

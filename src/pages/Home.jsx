@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import './Home.css'
 
 const sections = [
@@ -53,9 +54,24 @@ const sections = [
   },
 ]
 
+const SITE = 'https://go-fish-seattle.vercel.app'
+
 export default function Home() {
   return (
     <div className="home">
+      <Helmet>
+        <title>Go Fish Seattle! 🎣 Free Fishing Guide for Seattle Kids</title>
+        <meta name="description" content="Free fishing guide for Seattle-area kids ages 8–10. Find 12 kid-friendly spots, learn to cast, ID local fish, and check live weather — no experience needed." />
+        <meta property="og:title" content="Go Fish Seattle! 🎣" />
+        <meta property="og:description" content="Free fishing guide for Seattle-area kids. 12 spots, fish ID cards, live weather picks, and a parent's guide." />
+        <meta property="og:image" content={`${SITE}/og-image.png`} />
+        <meta property="og:url" content={SITE} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Go Fish Seattle! 🎣" />
+        <meta name="twitter:description" content="Free fishing guide for Seattle-area kids. 12 spots, fish ID cards, live weather picks, and a parent's guide." />
+        <meta name="twitter:image" content={`${SITE}/og-image.png`} />
+      </Helmet>
       {/* Hero */}
       <section className="hero">
         <div className="hero-waves" aria-hidden="true">

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import './LearnToFish.css'
 
 const sections = [
@@ -135,6 +136,14 @@ export default function LearnToFish() {
 
   return (
     <div className="learn-page">
+      <Helmet>
+        <title>Learn to Fish — Go Fish Seattle!</title>
+        <meta name="description" content="Cast a line, tie a clinch knot, and pick the right bait. Easy step-by-step fishing guides for Seattle kids ages 8–10 — with pictures and simple words." />
+        <meta property="og:title" content="Learn to Fish — Go Fish Seattle!" />
+        <meta property="og:description" content="Cast a line, tie a clinch knot, and pick the right bait. Easy guides for Seattle kids." />
+        <meta property="og:image" content="https://go-fish-seattle.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       {/* Tab nav */}
       <div className="learn-tabs">
         {sections.map(s => (

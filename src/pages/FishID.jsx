@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import './FishID.css'
 
 const fish = [
@@ -201,6 +202,14 @@ function FishCard({ fish: f }) {
 export default function FishID() {
   return (
     <div className="page fish-id-page">
+      <Helmet>
+        <title>Fish ID — Go Fish Seattle!</title>
+        <meta name="description" content="Flip cards for 6 common Seattle-area fish: rainbow trout, yellow perch, largemouth bass, coho salmon, cutthroat trout, and bluegill. Learn what they look like and how big to keep them." />
+        <meta property="og:title" content="Fish ID — Go Fish Seattle!" />
+        <meta property="og:description" content="Tap-to-flip cards for rainbow trout, perch, bass, salmon, and more. Learn what fish you caught!" />
+        <meta property="og:image" content="https://go-fish-seattle.vercel.app/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <h1 className="fish-id-title">🐟 Fish ID</h1>
       <p className="fish-id-intro">Tap a card to learn more about each fish!</p>
 
