@@ -9,6 +9,7 @@ const links = [
   { to: '/rules',   label: '📋 Rules' },
   { to: '/weather', label: '🌤️ Today?' },
   { to: '/clams',   label: '🦀 Clams' },
+  { to: '/parents', label: '👨‍👩‍👧 Parents' },
 ]
 
 export default function Navbar() {

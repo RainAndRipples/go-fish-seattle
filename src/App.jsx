@@ -6,6 +6,7 @@ import FishID from './pages/FishID'
 import Rules from './pages/Rules'
 import WeatherFish from './pages/WeatherFish'
 import ClamShellfish from './pages/ClamShellfish'
+import ParentsGuide from './pages/ParentsGuide'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/rules" element={<Rules />} />
         <Route path="/weather" element={<WeatherFish />} />
         <Route path="/clams" element={<ClamShellfish />} />
+        <Route path="/parents" element={<ParentsGuide />} />
       </Routes>
       <Footer />
     </BrowserRouter>
