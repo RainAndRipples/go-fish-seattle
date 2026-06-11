@@ -4,6 +4,7 @@ import LearnToFish from './pages/LearnToFish'
 import FishingSpots from './pages/FishingSpots'
 import FishID from './pages/FishID'
 import Rules from './pages/Rules'
+import WeatherFish from './pages/WeatherFish'
 import Navbar from './components/Navbar'
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/spots" element={<FishingSpots />} />
         <Route path="/fish-id" element={<FishID />} />
         <Route path="/rules" element={<Rules />} />
+        <Route path="/weather" element={<WeatherFish />} />
       </Routes>
     </BrowserRouter>
   )

@@ -7,6 +7,7 @@ const links = [
   { to: '/spots',   label: '📍 Spots' },
   { to: '/fish-id', label: '🐟 Fish ID' },
   { to: '/rules',   label: '📋 Rules' },
+  { to: '/weather', label: '🌤️ Today?' },
 ]
 
 export default function Navbar() {
