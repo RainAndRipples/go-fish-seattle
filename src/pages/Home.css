@@ -163,4 +163,11 @@
   .cards-grid {
     grid-template-columns: 1fr 1fr;
   }
+  /* last card spans full width if it's an orphan */
+  .home-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 280px;
+    margin: 0 auto;
+    width: 100%;
+  }
 }

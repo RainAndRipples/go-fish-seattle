@@ -4,9 +4,10 @@
 A free, kid-friendly website teaching kids ages 8–10 how to start fishing in the Seattle metro area. Built by a beginner, deployed for free on Vercel.
 
 ## Status (keep updated as we go)
-- v1 deployed and live on Vercel at https://go-fish-seattle.vercel.app
+- v2 deployed and live on Vercel at https://go-fish-seattle.vercel.app
 - Pipeline: GitHub repo (RainAndRipples/go-fish-seattle) → Vercel auto-deploys on every push
-- Pages done: Home, Learn to Fish, Fishing Spots, Fish ID, Rules for Kids
+- Pages done: Home, Learn to Fish, Fishing Spots (12 spots), Fish ID (with photos), Rules for Kids, Where Should I Fish Today?, Clams & Shellfish, Parent's Guide
+- Features done: Suggest a Spot mailto link, licensing section + footer, site-wide footer
 
 ## Conventions
 - Git identity: name "RainAndRipples", email 219553671+RainAndRipples@users.noreply.github.com — never my real name or personal email in commits, code, or site content
