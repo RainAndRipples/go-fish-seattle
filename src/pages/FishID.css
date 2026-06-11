@@ -23,7 +23,7 @@
 
 /* ── Flip card mechanics ── */
 .fish-card-scene {
-  height: 320px;
+  height: 340px;
   perspective: 900px;
   cursor: pointer;
   outline: none;
@@ -55,7 +55,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.4rem 1.1rem 1rem;
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -64,24 +63,43 @@
 .fish-card-front {
   background: linear-gradient(160deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 60%, white) 100%);
   color: white;
-  text-align: center;
-  justify-content: center;
-  gap: 0.4rem;
+  padding: 0;
+  justify-content: flex-start;
+  gap: 0;
 }
 
-.fish-card-emoji {
-  font-size: 3.5rem;
-  line-height: 1;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+.fish-card-photo-wrapper {
+  width: 100%;
+  height: 185px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.fish-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.fish-card-info {
+  flex: 1;
+  padding: 0.65rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.25rem;
+  width: 100%;
 }
 
 .fish-card-name {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   text-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .fish-card-tagline {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   opacity: 0.92;
   max-width: 200px;
   line-height: 1.4;
@@ -90,9 +108,8 @@
 .fish-card-meta {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-  margin-top: 0.5rem;
-  font-size: 0.8rem;
+  gap: 0.15rem;
+  font-size: 0.75rem;
   opacity: 0.88;
 }
 
@@ -102,14 +119,15 @@
   transform: rotateY(180deg);
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 0.75rem;
+  gap: 0.6rem;
   border-top: 5px solid var(--accent);
+  padding: 1rem 1.1rem 0.75rem;
 }
 
 .fish-card-back .fish-card-name {
   color: var(--accent);
   text-shadow: none;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   align-self: center;
 }
 
@@ -117,32 +135,44 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
   width: 100%;
   flex: 1;
 }
 
 .fish-facts li {
-  font-size: 0.82rem;
+  font-size: 0.79rem;
   color: #2c4a62;
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 .fish-keep {
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   color: #4a3800;
   background: #fffde7;
   border-radius: 8px;
-  padding: 0.4rem 0.65rem;
+  padding: 0.35rem 0.6rem;
   width: 100%;
   line-height: 1.4;
 }
 
-.fish-card-hint {
+.fish-wiki-link {
   font-size: 0.75rem;
-  opacity: 0.6;
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+  align-self: center;
+}
+
+.fish-wiki-link:hover {
+  text-decoration: underline;
+}
+
+.fish-card-hint {
+  font-size: 0.72rem;
+  opacity: 0.55;
   margin-top: auto;
-  padding-top: 0.3rem;
+  padding-top: 0.2rem;
 }
 
 /* ── WDFW note ── */
@@ -164,11 +194,44 @@
   font-weight: 700;
 }
 
+/* ── Credits ── */
+.fish-credits {
+  margin-top: 2rem;
+  border-top: 1px solid #dde7ef;
+  padding-top: 1.25rem;
+}
+
+.fish-credits-title {
+  font-size: 1rem;
+  color: var(--blue-dark);
+  margin-bottom: 0.6rem;
+}
+
+.fish-credits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.fish-credits-list li {
+  font-size: 0.8rem;
+  color: #5a7185;
+  line-height: 1.5;
+}
+
+.fish-credits-list a {
+  color: var(--blue);
+}
+
 @media (max-width: 480px) {
   .fish-grid {
     grid-template-columns: 1fr 1fr;
   }
   .fish-card-scene {
-    height: 280px;
+    height: 300px;
+  }
+  .fish-card-photo-wrapper {
+    height: 155px;
   }
 }

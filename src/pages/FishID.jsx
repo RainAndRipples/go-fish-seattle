@@ -4,13 +4,12 @@ import './FishID.css'
 const fish = [
   {
     name: 'Rainbow Trout',
-    emoji: '🐟',
+    image: '/fish/rainbow-trout.png',
     color: '#e91e8c',
     habitat: 'Lakes & Rivers',
     size: 'Up to 30 inches',
-    front: {
-      tagline: 'The most common catch around Seattle!',
-    },
+    wikiUrl: 'https://en.wikipedia.org/wiki/Rainbow_trout',
+    front: { tagline: 'The most common catch around Seattle!' },
     back: {
       facts: [
         'Has a pink or red stripe down its side',
@@ -20,16 +19,20 @@ const fish = [
       ],
       keepSize: 'Usually 8–12 inches minimum — check local rules',
     },
+    credit: {
+      author: 'Heqs',
+      license: 'Public domain',
+      url: 'https://commons.wikimedia.org/wiki/File:Rainbow_trout.png',
+    },
   },
   {
     name: 'Yellow Perch',
-    emoji: '🟡',
+    image: '/fish/yellow-perch.jpg',
     color: '#f9a825',
     habitat: 'Lakes',
     size: 'Up to 12 inches',
-    front: {
-      tagline: 'Easy to catch and great for beginners!',
-    },
+    wikiUrl: 'https://en.wikipedia.org/wiki/Yellow_perch',
+    front: { tagline: 'Easy to catch and great for beginners!' },
     back: {
       facts: [
         'Bright yellow with dark vertical stripes',
@@ -39,16 +42,20 @@ const fish = [
       ],
       keepSize: 'No minimum size in most WA lakes — check local rules',
     },
+    credit: {
+      author: 'Afarensis702',
+      license: 'CC0',
+      url: 'https://commons.wikimedia.org/wiki/File:Perca_flavescens.jpg',
+    },
   },
   {
     name: 'Largemouth Bass',
-    emoji: '🐠',
+    image: '/fish/largemouth-bass.jpg',
     color: '#388e3c',
     habitat: 'Lakes',
     size: 'Up to 24 inches',
-    front: {
-      tagline: 'A fierce fighter on the line!',
-    },
+    wikiUrl: 'https://en.wikipedia.org/wiki/Largemouth_bass',
+    front: { tagline: 'A fierce fighter on the line!' },
     back: {
       facts: [
         'Has a huge mouth that opens wide',
@@ -58,16 +65,20 @@ const fish = [
       ],
       keepSize: 'Usually 12 inches minimum — check local rules',
     },
+    credit: {
+      author: 'Duane Raver / USFWS',
+      license: 'Public domain',
+      url: 'https://commons.wikimedia.org/wiki/File:Micropterus_salmoides.jpg',
+    },
   },
   {
     name: 'Coho Salmon',
-    emoji: '🍣',
+    image: '/fish/coho-salmon.jpg',
     color: '#c62828',
     habitat: 'Puget Sound & Rivers',
     size: 'Up to 36 inches',
-    front: {
-      tagline: 'Washington\'s famous silver fish!',
-    },
+    wikiUrl: 'https://en.wikipedia.org/wiki/Coho_salmon',
+    front: { tagline: "Washington's famous silver fish!" },
     back: {
       facts: [
         'Also called "silver salmon" — bright silver sides',
@@ -77,16 +88,20 @@ const fish = [
       ],
       keepSize: 'Check WDFW — seasons and limits change yearly',
     },
+    credit: {
+      author: 'Afarensis702',
+      license: 'CC0',
+      url: 'https://commons.wikimedia.org/wiki/File:Oncorhynchus_kisutch.jpg',
+    },
   },
   {
     name: 'Cutthroat Trout',
-    emoji: '🔴',
+    image: '/fish/cutthroat-trout.jpg',
     color: '#d84315',
     habitat: 'Lakes, Rivers & Puget Sound',
     size: 'Up to 20 inches',
-    front: {
-      tagline: 'Named for the red slash under its jaw!',
-    },
+    wikiUrl: 'https://en.wikipedia.org/wiki/Cutthroat_trout',
+    front: { tagline: 'Named for the red slash under its jaw!' },
     back: {
       facts: [
         'Look for a red or orange slash under the chin',
@@ -96,16 +111,20 @@ const fish = [
       ],
       keepSize: 'Usually 14 inches minimum — check local rules',
     },
+    credit: {
+      author: 'U.S. Fish Commission, 1906',
+      license: 'Public domain',
+      url: 'https://commons.wikimedia.org/wiki/File:Oncorhynchus_clarkii_clarkii.jpg',
+    },
   },
   {
     name: 'Bluegill',
-    emoji: '💙',
+    image: '/fish/bluegill.jpg',
     color: '#1565c0',
     habitat: 'Lakes',
     size: 'Up to 10 inches',
-    front: {
-      tagline: 'Small, colorful, and super fun to catch!',
-    },
+    wikiUrl: 'https://en.wikipedia.org/wiki/Bluegill',
+    front: { tagline: 'Small, colorful, and super fun to catch!' },
     back: {
       facts: [
         'Has a bright blue patch on its gill cover',
@@ -115,6 +134,11 @@ const fish = [
       ],
       keepSize: 'No minimum size in most WA lakes — check local rules',
     },
+    credit: {
+      author: 'NOAA',
+      license: 'Public domain',
+      url: 'https://commons.wikimedia.org/wiki/File:Lepomis_macrochirus.jpg',
+    },
   },
 ]
 
@@ -123,7 +147,7 @@ function FishCard({ fish: f }) {
 
   return (
     <div
-      className={`fish-card-scene`}
+      className="fish-card-scene"
       onClick={() => setFlipped(v => !v)}
       role="button"
       tabIndex={0}
@@ -133,12 +157,16 @@ function FishCard({ fish: f }) {
       <div className={`fish-card-inner ${flipped ? 'is-flipped' : ''}`}>
         {/* Front */}
         <div className="fish-card-face fish-card-front" style={{ '--accent': f.color }}>
-          <div className="fish-card-emoji" aria-hidden="true">{f.emoji}</div>
-          <h2 className="fish-card-name">{f.name}</h2>
-          <p className="fish-card-tagline">{f.front.tagline}</p>
-          <div className="fish-card-meta">
-            <span>📍 {f.habitat}</span>
-            <span>📏 {f.size}</span>
+          <div className="fish-card-photo-wrapper">
+            <img className="fish-card-photo" src={f.image} alt={f.name} />
+          </div>
+          <div className="fish-card-info">
+            <h2 className="fish-card-name">{f.name}</h2>
+            <p className="fish-card-tagline">{f.front.tagline}</p>
+            <div className="fish-card-meta">
+              <span>📍 {f.habitat}</span>
+              <span>📏 {f.size}</span>
+            </div>
           </div>
           <div className="fish-card-hint">Tap to flip! 👆</div>
         </div>
@@ -154,6 +182,15 @@ function FishCard({ fish: f }) {
           <div className="fish-keep">
             ⚖️ <strong>Keep size:</strong> {f.back.keepSize}
           </div>
+          <a
+            className="fish-wiki-link"
+            href={f.wikiUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={e => e.stopPropagation()}
+          >
+            Learn more on Wikipedia →
+          </a>
           <div className="fish-card-hint">Tap to flip back 👆</div>
         </div>
       </div>
@@ -181,6 +218,21 @@ export default function FishID() {
           with a grown-up before keeping any fish!
         </p>
       </div>
+
+      <section className="fish-credits">
+        <h2 className="fish-credits-title">Image Credits</h2>
+        <ul className="fish-credits-list">
+          {fish.map(f => (
+            <li key={f.name}>
+              <strong>{f.name}:</strong>{' '}
+              <a href={f.credit.url} target="_blank" rel="noopener noreferrer">
+                {f.credit.author}
+              </a>
+              {' '}— {f.credit.license} via Wikimedia Commons
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   )
 }
