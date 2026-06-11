@@ -64,6 +64,41 @@ export default function Rules() {
         ))}
       </div>
 
+      {/* Get your license */}
+      <div className="rules-license-section">
+        <h2 className="rules-license-title">🎫 Get Your License</h2>
+
+        <div className="rules-license-free">
+          <span className="rules-license-free-badge">FREE</span>
+          <div>
+            <p className="rules-license-free-heading">Kids 14 and under fish for free!</p>
+            <p className="rules-license-free-sub">No license, no paperwork — just grab a rod and go. Washington makes it easy for kids to start fishing.</p>
+          </div>
+        </div>
+
+        <ul className="rules-license-list">
+          <li>
+            <strong>Age 15+:</strong> A youth fishing license is required. Get one at{' '}
+            <a href="https://fishhunt.wa.gov" target="_blank" rel="noopener noreferrer">fishhunt.wa.gov</a>
+          </li>
+          <li>
+            <strong>Adults:</strong> A fishing license is required. Buy online at{' '}
+            <a href="https://fishhunt.wa.gov" target="_blank" rel="noopener noreferrer">fishhunt.wa.gov</a>
+          </li>
+          <li>
+            <strong>Combo license:</strong> The WDFW combination license covers fishing AND shellfish — a great deal if your family does both!
+          </li>
+          <li>
+            <strong>Salmon &amp; steelhead:</strong> A free Catch Record Card is also required (even for kids). Get it at the same place.
+          </li>
+        </ul>
+
+        <p className="rules-license-note">
+          License prices change each year — always check current pricing at{' '}
+          <a href="https://fishhunt.wa.gov" target="_blank" rel="noopener noreferrer">fishhunt.wa.gov</a>.
+        </p>
+      </div>
+
       <div className="rules-wdfw-box">
         <div className="rules-wdfw-icon" aria-hidden="true">🔗</div>
         <div>

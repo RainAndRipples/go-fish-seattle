@@ -7,6 +7,7 @@ import Rules from './pages/Rules'
 import WeatherFish from './pages/WeatherFish'
 import ClamShellfish from './pages/ClamShellfish'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/weather" element={<WeatherFish />} />
         <Route path="/clams" element={<ClamShellfish />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

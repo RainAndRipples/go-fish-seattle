@@ -74,6 +74,96 @@
   font-style: italic;
 }
 
+/* ── License section ── */
+.rules-license-section {
+  max-width: 680px;
+  margin: 2rem auto 0;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.75rem;
+}
+
+.rules-license-title {
+  font-size: 1.4rem;
+  color: var(--blue-dark);
+  margin-bottom: 1rem;
+}
+
+.rules-license-free {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: linear-gradient(135deg, #e8f5e9, #f1fbf3);
+  border: 2px solid var(--green);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.rules-license-free-badge {
+  background: var(--green);
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.rules-license-free-heading {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  color: #1b5e20;
+  margin-bottom: 0.3rem;
+}
+
+.rules-license-free-sub {
+  font-size: 0.9rem;
+  color: #2e7d32;
+  line-height: 1.5;
+}
+
+.rules-license-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.rules-license-list li {
+  font-size: 0.93rem;
+  color: #2c4a62;
+  line-height: 1.5;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.rules-license-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.rules-license-list a {
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.rules-license-note {
+  font-size: 0.82rem;
+  color: #7a90a8;
+  line-height: 1.5;
+}
+
+.rules-license-note a {
+  color: var(--blue);
+}
+
 /* ── WDFW box ── */
 .rules-wdfw-box {
   max-width: 680px;
