@@ -8,6 +8,7 @@ const links = [
   { to: '/fish-id', label: '🐟 Fish ID' },
   { to: '/rules',   label: '📋 Rules' },
   { to: '/weather', label: '🌤️ Today?' },
+  { to: '/clams',   label: '🦀 Clams' },
 ]
 
 export default function Navbar() {
