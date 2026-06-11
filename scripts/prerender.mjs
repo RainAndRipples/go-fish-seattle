@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = resolve(__dirname, '..')
 
-const routes = ['/', '/learn', '/spots', '/fish-id', '/rules', '/weather', '/clams', '/parents']
+const routes = ['/', '/learn', '/lakes', '/sound', '/fish-id', '/rules', '/weather', '/clams', '/parents']
 
 async function prerender() {
   const template = readFileSync(resolve(root, 'dist/index.html'), 'utf-8')

@@ -4,7 +4,7 @@
   background: linear-gradient(160deg, #1266cc 0%, #00bcd4 100%);
   color: white;
   text-align: center;
-  padding: 4rem 1rem 6rem;
+  padding: 3rem 1rem 5rem;
   overflow: hidden;
 }
 
@@ -46,8 +46,10 @@
 }
 
 .hero-fish {
-  font-size: 5rem;
+  font-size: 4rem;
   animation: bob 3s ease-in-out infinite;
+  line-height: 1;
+  margin-bottom: 0.25rem;
 }
 
 @keyframes bob {
@@ -62,79 +64,116 @@
 }
 
 .hero-sub {
-  font-size: clamp(1rem, 3vw, 1.35rem);
-  font-weight: 600;
-  margin: 0.75rem 0 1.75rem;
-  opacity: 0.92;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
 }
 
-.hero-cta {
-  font-size: 1.25rem;
-  padding: 0.85rem 2.2rem;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+/* ── Adventure section ── */
+.adventure-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem 2.5rem;
 }
 
-/* ── Cards ── */
-.home-cards {
-  padding-top: 2.5rem;
-}
-
-.section-heading {
-  font-size: 1.9rem;
-  margin-bottom: 1.25rem;
-  text-align: center;
-  color: var(--blue-dark);
-}
-
-.cards-grid {
+/* ── Two adventure doors ── */
+.adventure-doors {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
+  margin-top: -2rem; /* overlap the wave slightly */
+  margin-bottom: 1.25rem;
 }
 
-.home-card {
-  background: var(--card-bg);
+.adventure-door {
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.75rem 1.25rem;
+  padding: 2.5rem 1.5rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 0.5rem;
   text-decoration: none;
-  color: var(--text);
+  color: white;
+  gap: 0.6rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
   transition: transform 0.15s, box-shadow 0.15s;
-}
-
-.home-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.14);
-  text-decoration: none;
-}
-
-.home-card-emoji {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.home-card h3 {
-  font-size: 1.35rem;
-  margin: 0.25rem 0 0.1rem;
-}
-
-.home-card p {
-  font-size: 0.9rem;
-  color: #5a7185;
-  margin-bottom: 0.75rem;
-  flex: 1;
-}
-
-.home-card .btn {
-  font-size: 0.9rem;
-  padding: 0.5rem 1.2rem;
-  width: 100%;
+  min-height: 260px;
   justify-content: center;
+}
+
+.adventure-door:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 36px rgba(0,0,0,0.22);
+  text-decoration: none;
+  color: white;
+}
+
+.door--lakes { background: linear-gradient(160deg, #1b5e20 0%, #43a047 100%); }
+.door--sound { background: linear-gradient(160deg, #01579b 0%, #00acc1 100%); }
+
+.door-icon {
+  font-size: 3.5rem;
+  line-height: 1;
+  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.25));
+}
+
+.door-title {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  line-height: 1.2;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.door-desc {
+  font-size: 0.88rem;
+  opacity: 0.9;
+  max-width: 210px;
+  line-height: 1.5;
+}
+
+.door-cta {
+  display: inline-block;
+  background: rgba(255,255,255,0.22);
+  border-radius: 999px;
+  padding: 0.4rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-top: 0.25rem;
+  transition: background 0.15s;
+}
+
+.adventure-door:hover .door-cta {
+  background: rgba(255,255,255,0.32);
+}
+
+/* ── Secondary links ── */
+.secondary-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.secondary-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: white;
+  border-radius: var(--radius);
+  padding: 0.85rem 0.75rem;
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-weight: 700;
+  font-size: 0.88rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.12s, box-shadow 0.12s;
+  text-align: center;
+}
+
+.secondary-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  text-decoration: none;
 }
 
 /* ── Fun fact ── */
@@ -159,15 +198,16 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 480px) {
-  .cards-grid {
-    grid-template-columns: 1fr 1fr;
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  .adventure-doors {
+    grid-template-columns: 1fr;
   }
-  /* last card spans full width if it's an orphan */
-  .home-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-    max-width: 280px;
-    margin: 0 auto;
-    width: 100%;
+  .adventure-door {
+    min-height: 200px;
+    padding: 2rem 1.25rem 1.75rem;
+  }
+  .secondary-links {
+    grid-template-columns: 1fr 1fr;
   }
 }

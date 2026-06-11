@@ -3,12 +3,12 @@ import './Navbar.css'
 
 const links = [
   { to: '/',        label: '🏠 Home' },
+  { to: '/lakes',   label: '🏞️ Lakes' },
+  { to: '/sound',   label: '🌊 Sound' },
   { to: '/learn',   label: '📚 Learn' },
-  { to: '/spots',   label: '📍 Spots' },
   { to: '/fish-id', label: '🐟 Fish ID' },
   { to: '/rules',   label: '📋 Rules' },
   { to: '/weather', label: '🌤️ Today?' },
-  { to: '/clams',   label: '🦀 Clams' },
   { to: '/parents', label: '👨‍👩‍👧 Parents' },
 ]
 
