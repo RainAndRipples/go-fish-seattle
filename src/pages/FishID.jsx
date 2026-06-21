@@ -5,7 +5,7 @@ import './FishID.css'
 const fish = [
   {
     name: 'Rainbow Trout',
-    image: '/fish/rainbow-trout.png',
+    image: '/fish/rainbow-trout.jpg',
     color: '#e91e8c',
     habitat: 'Lakes & Rivers',
     size: 'Up to 30 inches',
@@ -21,9 +21,9 @@ const fish = [
       keepSize: 'Usually 8–12 inches minimum — check local rules',
     },
     credit: {
-      author: 'Heqs',
+      author: 'Timothy Knepp / USFWS',
       license: 'Public domain',
-      url: 'https://commons.wikimedia.org/wiki/File:Rainbow_trout.png',
+      url: 'https://commons.wikimedia.org/wiki/File:Rainbow_trout_FWS_1.jpg',
     },
   },
   {
@@ -44,9 +44,9 @@ const fish = [
       keepSize: 'No minimum size in most WA lakes — check local rules',
     },
     credit: {
-      author: 'Afarensis702',
-      license: 'CC0',
-      url: 'https://commons.wikimedia.org/wiki/File:Perca_flavescens.jpg',
+      author: 'Sam Stukel / USFWS',
+      license: 'Public domain',
+      url: 'https://commons.wikimedia.org/wiki/File:Yellow_Perch_(Perca_flavescens).jpg',
     },
   },
   {
@@ -67,9 +67,9 @@ const fish = [
       keepSize: 'Usually 12 inches minimum — check local rules',
     },
     credit: {
-      author: 'Duane Raver / USFWS',
-      license: 'Public domain',
-      url: 'https://commons.wikimedia.org/wiki/File:Micropterus_salmoides.jpg',
+      author: 'Cliff',
+      license: 'CC BY 2.0',
+      url: 'https://commons.wikimedia.org/wiki/File:Largemouth_Bass_(Micropterus_salmoides).jpg',
     },
   },
   {
@@ -90,9 +90,9 @@ const fish = [
       keepSize: 'Check WDFW — seasons and limits change yearly',
     },
     credit: {
-      author: 'Afarensis702',
-      license: 'CC0',
-      url: 'https://commons.wikimedia.org/wiki/File:Oncorhynchus_kisutch.jpg',
+      author: 'Roger Tabor / USFWS',
+      license: 'Public domain',
+      url: 'https://commons.wikimedia.org/wiki/File:Coho_salmon_Big_Quilcene_River_4_December_2021.png',
     },
   },
   {
@@ -113,9 +113,9 @@ const fish = [
       keepSize: 'Usually 14 inches minimum — check local rules',
     },
     credit: {
-      author: 'U.S. Fish Commission, 1906',
-      license: 'Public domain',
-      url: 'https://commons.wikimedia.org/wiki/File:Oncorhynchus_clarkii_clarkii.jpg',
+      author: 'USDA',
+      license: 'CC BY 2.0',
+      url: 'https://commons.wikimedia.org/wiki/File:A_cutthroat_trout.jpg',
     },
   },
   {
@@ -136,9 +136,9 @@ const fish = [
       keepSize: 'No minimum size in most WA lakes — check local rules',
     },
     credit: {
-      author: 'NOAA',
+      author: 'Larry Perez / NPS',
       license: 'Public domain',
-      url: 'https://commons.wikimedia.org/wiki/File:Lepomis_macrochirus.jpg',
+      url: 'https://commons.wikimedia.org/wiki/File:Blue_Gill_Sunfish,_NPSPhoto,_Larry_Perez_(9243085858).jpg',
     },
   },
 ]
