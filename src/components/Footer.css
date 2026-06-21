@@ -1,56 +1,58 @@
 .footer {
-  background: var(--blue-dark);
-  color: rgba(255,255,255,0.85);
-  margin-top: 3rem;
-  padding: 2rem 1rem 1.5rem;
+  background: var(--slate);
+  color: rgba(245,239,227,0.72);
+  margin-top: 4rem;
+  padding: 2.5rem 1.5rem 2rem;
 }
 
 .footer-inner {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
   text-align: center;
 }
 
 .footer-brand {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.3rem;
-  color: white;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--cream);
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
+  gap: 0.5rem 1.75rem;
   justify-content: center;
 }
 
 .footer-links a {
-  color: rgba(255,255,255,0.8);
-  font-size: 0.88rem;
+  color: rgba(245,239,227,0.65);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.82rem;
   text-decoration: none;
   transition: color 0.15s;
 }
 
 .footer-links a:hover {
-  color: white;
+  color: var(--cream);
   text-decoration: underline;
 }
 
 .footer-note {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.6);
-  line-height: 1.5;
+  font-size: 0.78rem;
+  color: rgba(245,239,227,0.45);
+  line-height: 1.6;
 }
 
 .footer-note a {
-  color: rgba(255,255,255,0.8);
-  font-weight: 700;
+  color: rgba(245,239,227,0.65);
+  font-weight: 600;
 }
 
-.footer-note a:hover {
-  color: white;
-}
+.footer-note a:hover { color: var(--cream); }

@@ -4,15 +4,15 @@
 
 .fish-id-title {
   font-size: clamp(1.8rem, 6vw, 2.8rem);
-  color: var(--blue-dark);
+  color: var(--slate);
   text-align: center;
 }
 
 .fish-id-intro {
   text-align: center;
-  color: #5a7185;
+  color: var(--text-mid);
   margin: 0.4rem 0 1.75rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .fish-grid {
@@ -30,7 +30,7 @@
 }
 
 .fish-card-scene:focus-visible .fish-card-inner {
-  outline: 3px solid var(--blue);
+  outline: 2px solid var(--moss);
   outline-offset: 3px;
 }
 
@@ -56,13 +56,14 @@
   flex-direction: column;
   align-items: center;
   box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   overflow: hidden;
 }
 
-/* Front */
+/* Front — keep scientific illustration feel, earthy dark header */
 .fish-card-front {
-  background: linear-gradient(160deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 60%, white) 100%);
-  color: white;
+  background: var(--evergreen);
+  color: var(--cream);
   padding: 0;
   justify-content: flex-start;
   gap: 0;
@@ -95,14 +96,16 @@
 
 .fish-card-name {
   font-size: 1.2rem;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  color: var(--cream);
 }
 
 .fish-card-tagline {
   font-size: 0.82rem;
-  opacity: 0.92;
+  opacity: 0.82;
   max-width: 200px;
   line-height: 1.4;
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
 }
 
 .fish-card-meta {
@@ -110,22 +113,22 @@
   flex-direction: column;
   gap: 0.15rem;
   font-size: 0.75rem;
-  opacity: 0.88;
+  opacity: 0.72;
 }
 
 /* Back */
 .fish-card-back {
-  background: white;
+  background: var(--card-bg);
   transform: rotateY(180deg);
   align-items: flex-start;
   justify-content: flex-start;
   gap: 0.6rem;
-  border-top: 5px solid var(--accent);
+  border-top: 3px solid var(--moss);
   padding: 1rem 1.1rem 0.75rem;
 }
 
 .fish-card-back .fish-card-name {
-  color: var(--accent);
+  color: var(--evergreen);
   text-shadow: none;
   font-size: 1.1rem;
   align-self: center;
@@ -142,15 +145,15 @@
 
 .fish-facts li {
   font-size: 0.79rem;
-  color: #2c4a62;
+  color: var(--slate-mid);
   line-height: 1.35;
 }
 
 .fish-keep {
   font-size: 0.76rem;
-  color: #4a3800;
-  background: #fffde7;
-  border-radius: 8px;
+  color: var(--slate);
+  background: var(--fog);
+  border-radius: var(--radius);
   padding: 0.35rem 0.6rem;
   width: 100%;
   line-height: 1.4;
@@ -158,52 +161,54 @@
 
 .fish-wiki-link {
   font-size: 0.75rem;
-  color: var(--blue);
+  color: var(--moss);
   font-weight: 700;
+  font-family: 'DM Sans', system-ui, sans-serif;
   text-decoration: none;
   align-self: center;
 }
 
-.fish-wiki-link:hover {
-  text-decoration: underline;
-}
+.fish-wiki-link:hover { text-decoration: underline; }
 
 .fish-card-hint {
   font-size: 0.72rem;
-  opacity: 0.55;
+  opacity: 0.45;
   margin-top: auto;
   padding-top: 0.2rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 /* ── WDFW note ── */
 .fish-wdfw-note {
   margin-top: 2rem;
-  background: #fff3e0;
-  border: 2px solid #ff6f00;
-  border-radius: var(--radius);
+  background: var(--fog);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cedar);
+  border-radius: 0 var(--radius) var(--radius) 0;
   padding: 1rem 1.25rem;
   display: flex;
   gap: 0.75rem;
   align-items: flex-start;
-  font-size: 0.95rem;
-  color: #4a2800;
+  font-size: 0.92rem;
+  color: var(--slate);
 }
 
 .fish-wdfw-note a {
-  color: var(--orange);
-  font-weight: 700;
+  color: var(--cedar);
+  font-weight: 600;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 /* ── Credits ── */
 .fish-credits {
   margin-top: 2rem;
-  border-top: 1px solid #dde7ef;
+  border-top: 1px solid var(--border);
   padding-top: 1.25rem;
 }
 
 .fish-credits-title {
   font-size: 1rem;
-  color: var(--blue-dark);
+  color: var(--slate);
   margin-bottom: 0.6rem;
 }
 
@@ -216,22 +221,14 @@
 
 .fish-credits-list li {
   font-size: 0.8rem;
-  color: #5a7185;
+  color: var(--text-mid);
   line-height: 1.5;
 }
 
-.fish-credits-list a {
-  color: var(--blue);
-}
+.fish-credits-list a { color: var(--moss); }
 
 @media (max-width: 480px) {
-  .fish-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .fish-card-scene {
-    height: 300px;
-  }
-  .fish-card-photo-wrapper {
-    height: 155px;
-  }
+  .fish-grid { grid-template-columns: 1fr 1fr; }
+  .fish-card-scene { height: 300px; }
+  .fish-card-photo-wrapper { height: 155px; }
 }

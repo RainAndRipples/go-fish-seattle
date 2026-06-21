@@ -5,25 +5,27 @@
 
 .parents-title {
   font-size: clamp(1.8rem, 6vw, 2.8rem);
-  color: var(--blue-dark);
+  color: var(--slate);
   text-align: center;
 }
 
 .parents-subtitle {
   text-align: center;
-  color: #7a90a8;
+  color: var(--text-mid);
   margin: 0.25rem 0 1.25rem;
   font-size: 0.95rem;
   font-style: italic;
+  font-family: 'Lora', Georgia, serif;
 }
 
 .parents-intro {
   font-size: 1.05rem;
-  color: #3a5068;
+  color: var(--slate-mid);
   line-height: 1.7;
   margin-bottom: 2rem;
   padding: 1.25rem 1.5rem;
-  background: white;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -34,7 +36,8 @@
   flex-direction: column;
   gap: 0.4rem;
   margin-bottom: 2.5rem;
-  background: white;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1.25rem 1.5rem;
@@ -42,21 +45,24 @@
 
 .parents-toc::before {
   content: 'Jump to:';
-  font-family: 'Fredoka One', cursive;
-  font-size: 0.9rem;
-  color: var(--blue-dark);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: var(--text-mid);
   margin-bottom: 0.4rem;
   display: block;
 }
 
 .parents-toc-link {
   font-size: 0.93rem;
-  color: var(--blue);
+  color: var(--moss);
   text-decoration: none;
   line-height: 1.5;
   padding: 0.2rem 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 500;
 }
 
 .parents-toc-link:hover {
@@ -71,8 +77,9 @@
 }
 
 .parents-section {
-  background: var(--sec-bg);
-  border-left: 5px solid var(--sec-border);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--sec-border, var(--moss));
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: 1.5rem 1.75rem;
   scroll-margin-top: 5rem;
@@ -80,7 +87,7 @@
 
 .parents-section-title {
   font-size: 1.25rem;
-  color: var(--sec-head);
+  color: var(--sec-head, var(--slate));
   margin-bottom: 1rem;
   display: flex;
   align-items: baseline;
@@ -89,7 +96,7 @@
 
 .parents-section-body {
   font-size: 1rem;
-  color: #2c4060;
+  color: var(--slate-mid);
   line-height: 1.7;
   margin-bottom: 0.85rem;
 }
@@ -102,14 +109,20 @@
 .parents-closing {
   margin-top: 2.5rem;
   padding: 1.5rem 1.75rem;
-  background: var(--blue-dark);
-  color: rgba(255,255,255,0.9);
+  background: var(--evergreen);
+  color: var(--cream);
   border-radius: var(--radius);
   font-size: 1.05rem;
   line-height: 1.7;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+}
+
+.parents-closing a {
+  color: var(--ochre);
+  font-weight: 600;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 @media (max-width: 480px) {

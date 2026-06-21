@@ -10,11 +10,11 @@
 
 .lakes-title {
   font-size: clamp(1.8rem, 6vw, 2.8rem);
-  color: var(--blue-dark);
+  color: var(--slate);
 }
 
 .lakes-intro {
-  color: #5a7185;
+  color: var(--text-mid);
   margin: 0.4rem 0 0;
   font-size: 1rem;
 }
@@ -32,27 +32,27 @@
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  background: white;
-  border: 2px solid #d0dce8;
+  background: var(--card-bg);
+  border: 2px solid var(--border);
   border-radius: 999px;
   padding: 0.45rem 1.1rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--text);
+  color: var(--text-mid);
   cursor: pointer;
   transition: all 0.15s;
 }
 
 .filter-btn:hover {
-  border-color: var(--blue);
-  color: var(--blue-dark);
+  border-color: var(--moss);
+  color: var(--evergreen);
 }
 
 .filter-btn--active {
-  background: var(--blue-dark);
-  border-color: var(--blue-dark);
-  color: white;
+  background: var(--evergreen);
+  border-color: var(--evergreen);
+  color: var(--cream);
 }
 
 .filter-count {
@@ -64,7 +64,7 @@
 }
 
 .filter-btn--active .filter-count {
-  background: rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.22);
 }
 
 /* ── Spot cards grid ── */
@@ -77,6 +77,7 @@
 /* ── Individual card ── */
 .spot-card {
   background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -84,15 +85,15 @@
   flex-direction: column;
 }
 
-.spot-card--eastside .spot-header      { background: linear-gradient(135deg, #1b5e20, #43a047); }
-.spot-card--seattle-south .spot-header { background: linear-gradient(135deg, #1266cc, #00bcd4); }
+.spot-card--eastside .spot-header      { background: var(--evergreen); }
+.spot-card--seattle-south .spot-header { background: var(--slate); }
 
 .spot-header {
   display: flex;
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 1.25rem;
-  color: white;
+  color: var(--cream);
 }
 
 .spot-emoji {
@@ -109,11 +110,13 @@
   font-size: 1.15rem;
   line-height: 1.2;
   margin-bottom: 0.1rem;
+  color: var(--cream);
 }
 
 .spot-location {
   font-size: 0.82rem;
-  opacity: 0.9;
+  opacity: 0.8;
+  color: var(--cream);
 }
 
 /* ── Card body ── */
@@ -126,10 +129,13 @@
 }
 
 .spot-section-label {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  color: var(--blue-dark);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-mid);
   margin-bottom: 0.35rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 .catch-list {
@@ -140,37 +146,38 @@
 }
 
 .catch-list li {
-  background: #e3f2fd;
-  color: var(--blue-dark);
+  background: #EAF0E8;
+  color: var(--evergreen);
   font-size: 0.8rem;
   font-weight: 700;
   padding: 0.18rem 0.65rem;
   border-radius: 999px;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.spot-card--seattle-south .catch-list li {
+  background: var(--fog);
+  color: var(--slate);
 }
 
 .spot-best-for {
-  font-size: 0.92rem;
-  color: #2e4a28;
-  background: #e8f5e9;
-  border-radius: 10px;
+  font-size: 0.88rem;
+  color: var(--slate-mid);
+  background: var(--fog);
+  border-radius: var(--radius);
   padding: 0.6rem 0.85rem;
-  line-height: 1.4;
+  line-height: 1.5;
   display: flex;
   gap: 0.4rem;
 }
 
-.spot-card--seattle-south .spot-best-for {
-  color: #1a3250;
-  background: #e3f2fd;
-}
-
 .spot-tip {
-  background: #fffde7;
-  border-left: 4px solid var(--yellow);
+  background: var(--fog);
+  border-left: 3px solid var(--ochre);
   padding: 0.55rem 0.85rem;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
   font-size: 0.86rem;
-  color: #4a3800;
+  color: var(--slate);
   line-height: 1.45;
 }
 
@@ -185,24 +192,26 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  background: #f5f7fa;
+  background: var(--fog);
+  border: 1px solid var(--border);
   border-radius: 999px;
   padding: 0.2rem 0.6rem;
   font-size: 0.78rem;
-  color: #5a6a7a;
+  color: var(--text-mid);
   font-weight: 600;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 /* ── Parent info ── */
 .spot-parent-info {
-  background: #f5f5f5;
-  border-radius: 10px;
+  background: var(--fog);
+  border-radius: var(--radius);
   padding: 0.65rem 0.9rem;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   font-size: 0.84rem;
-  color: #555;
+  color: var(--slate-mid);
   line-height: 1.5;
   margin-top: auto;
 }
@@ -219,6 +228,7 @@
   text-align: center;
   padding: 0.55rem 0.5rem;
   border-radius: 999px;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-weight: 700;
   font-size: 0.82rem;
   text-decoration: none;
@@ -231,51 +241,55 @@
 }
 
 .spot-btn--maps {
-  background: #e8f5e9;
-  color: #2e7d32;
-  border: 2px solid #a5d6a7;
+  background: #EAF0E8;
+  color: var(--evergreen);
+  border: 2px solid var(--moss);
 }
 
-.spot-btn--maps:hover { background: #c8e6c9; }
+.spot-btn--maps:hover { background: #D4E5D0; }
 
 .spot-btn--wdfw {
-  background: #fff3e0;
-  color: #e65100;
-  border: 2px solid #ffcc80;
+  background: var(--fog);
+  color: var(--cedar);
+  border: 2px solid var(--cedar);
 }
 
-.spot-btn--wdfw:hover { background: #ffe0b2; }
+.spot-btn--wdfw:hover { background: var(--fog-dark); }
 
 /* ── Suggest a spot ── */
 .spots-suggest {
   margin-top: 2rem;
-  background: linear-gradient(135deg, #e3f2fd, #f0f8ff);
-  border: 2px solid var(--blue);
-  border-radius: var(--radius);
+  background: var(--fog);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--ochre);
+  border-radius: 0 0 var(--radius) var(--radius);
   padding: 1.75rem 1.25rem;
   text-align: center;
 }
 
 .spots-suggest-label {
-  font-size: 0.9rem;
-  color: #5a7185;
+  font-size: 0.78rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: var(--text-mid);
   margin-bottom: 0.25rem;
 }
 
 .spots-suggest-heading {
   font-size: 1.4rem;
-  color: var(--blue-dark);
+  color: var(--slate);
   margin-bottom: 1rem;
 }
 
 .btn-suggest {
   display: inline-block;
-  background: var(--blue);
-  color: white;
+  background: var(--evergreen);
+  color: var(--cream);
   padding: 0.75rem 1.75rem;
   border-radius: 999px;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-weight: 700;
   text-decoration: none;
   font-size: 1rem;
@@ -287,26 +301,28 @@
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(0,0,0,0.2);
   text-decoration: none;
-  color: white;
+  color: var(--cream);
 }
 
 /* ── WDFW disclaimer ── */
 .spots-wdfw-note {
   margin-top: 1.5rem;
-  background: #fff3e0;
-  border: 2px solid #ff6f00;
-  border-radius: var(--radius);
+  background: var(--fog);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cedar);
+  border-radius: 0 var(--radius) var(--radius) 0;
   padding: 1rem 1.25rem;
   display: flex;
   gap: 0.75rem;
   align-items: flex-start;
   font-size: 0.95rem;
-  color: #4a2800;
+  color: var(--slate);
 }
 
 .spots-wdfw-note a {
-  color: var(--orange);
+  color: var(--cedar);
   font-weight: 700;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 /* ── Mobile ── */

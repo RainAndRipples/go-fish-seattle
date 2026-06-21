@@ -1,7 +1,33 @@
 {
   "permissions": {
     "allow": [
-      "Bash(~/.local/bin/gh auth *)"
+      "Bash(~/.local/bin/gh auth *)",
+      "Bash(mkdir -p /Users/jumodot/Projects/go-fish-seattle/public/fish)",
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/commons/b/b5/Rainbow_trout.png\" -o rainbow-trout.png)",
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/commons/a/aa/Perca_flavescens.jpg\" -o yellow-perch.jpg)",
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/commons/e/e4/Micropterus_salmoides.jpg\" -o largemouth-bass.jpg)",
+      "Bash(curl -sL \"https://upload.wikimedia.org/wikipedia/commons/0/03/Oncorhynchus_kisutch.jpg\" -o coho-salmon.jpg)",
+      "Bash(sips -Z 900 coho-salmon.jpg --out coho-salmon.jpg)",
+      "Bash(sips -Z 900 yellow-perch.jpg --out yellow-perch.jpg)",
+      "Bash(npm run *)",
+      "Bash(git add *)",
+      "Bash(git -c user.name=RainAndRipples -c user.email=219553671+RainAndRipples@users.noreply.github.com commit -m ' *)",
+      "Bash(git push *)",
+      "Skill(run)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5174)",
+      "Bash(npx playwright *)",
+      "Bash(npm install *)",
+      "Bash(node *)",
+      "Bash(sed -n '/<head>/,/<\\\\/head>/p' dist/index.html)",
+      "Bash(sed -n '/<head>/,/<\\\\/head>/p' dist/spots/index.html)",
+      "Bash(curl -sf https://go-fish-seattle.vercel.app/)",
+      "Bash(curl -sf https://go-fish-seattle.vercel.app/spots)",
+      "Bash(curl -sf https://go-fish-seattle.vercel.app/weather)",
+      "Bash(curl -sf https://go-fish-seattle.vercel.app/robots.txt)",
+      "Bash(curl -sf https://go-fish-seattle.vercel.app/sitemap.xml)",
+      "Bash(git -c user.name=\"RainAndRipples\" -c user.email=\"219553671+RainAndRipples@users.noreply.github.com\" add src/pages/Home.css src/pages/Home.jsx src/pages/PugetSound.jsx src/pages/PugetSound.css src/components/Navbar.jsx src/App.jsx scripts/prerender.mjs)",
+      "WebSearch",
+      "Bash(gh run *)"
     ]
   }
 }

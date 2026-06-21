@@ -4,8 +4,8 @@
 
 /* ── Tab bar ── */
 .learn-tabs {
-  background: white;
-  border-bottom: 3px solid #e0eaf2;
+  background: var(--fog);
+  border-bottom: 2px solid var(--border);
   display: flex;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -26,22 +26,22 @@
   border: none;
   background: none;
   cursor: pointer;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-size: 0.8rem;
-  font-weight: 700;
-  color: #7a9ab5;
+  font-weight: 600;
+  color: var(--text-mid);
   white-space: nowrap;
   flex-shrink: 0;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -3px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
   transition: color 0.15s;
 }
 
 .learn-tab span:first-child { font-size: 1.3rem; }
 
 .learn-tab--active {
-  color: var(--blue-dark);
-  border-bottom-color: var(--blue);
+  color: var(--evergreen);
+  border-bottom-color: var(--moss);
 }
 
 .learn-content {
@@ -50,12 +50,12 @@
 
 .learn-title {
   font-size: clamp(1.6rem, 5vw, 2.4rem);
-  color: var(--blue-dark);
+  color: var(--slate);
   margin-bottom: 0.3rem;
 }
 
 .learn-subtitle {
-  color: #5a7185;
+  color: var(--text-mid);
   font-size: 1rem;
   margin-bottom: 1.5rem;
   max-width: 560px;
@@ -67,14 +67,15 @@
 }
 
 .rod-instruction {
-  color: #5a7185;
+  color: var(--text-mid);
   font-size: 0.95rem;
   margin-bottom: 0.75rem;
 }
 
 .rod-diagram-wrap {
   position: relative;
-  background: #e8f5fd;
+  background: var(--fog);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1rem;
   margin-bottom: 1rem;
@@ -91,7 +92,7 @@
   transform: translate(-50%, -50%);
   width: 28px;
   height: 28px;
-  background: var(--blue);
+  background: var(--moss);
   border: 3px solid white;
   border-radius: 50%;
   cursor: pointer;
@@ -99,12 +100,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   transition: background 0.15s, transform 0.15s;
   z-index: 2;
 }
 
 .rod-dot--active {
-  background: var(--orange);
+  background: var(--cedar);
   transform: translate(-50%, -50%) scale(1.2);
 }
 
@@ -114,16 +116,17 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 0.76rem;
-  font-weight: 800;
-  color: var(--blue-dark);
+  font-weight: 700;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  color: var(--evergreen);
   white-space: nowrap;
   pointer-events: none;
 }
 
 .rod-info-box {
-  background: white;
-  border-radius: 12px;
-  border: 2px solid var(--blue);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
   padding: 0.85rem 1rem;
   font-size: 0.95rem;
   color: var(--text);
@@ -134,8 +137,8 @@
 }
 
 .rod-info-box--visible {
-  border-color: var(--orange);
-  background: #fff3e0;
+  border-color: var(--cedar);
+  background: var(--fog);
 }
 
 /* ── Steps ── */
@@ -150,17 +153,19 @@
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
-  background: white;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 1rem 1.1rem;
 }
 
 .step-number {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.5rem;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
   color: white;
-  background: var(--blue);
+  background: var(--evergreen);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -180,23 +185,23 @@
 .step-body h3 {
   font-size: 1rem;
   margin-bottom: 0.25rem;
-  color: var(--blue-dark);
+  color: var(--slate);
 }
 
 .step-body p {
   font-size: 0.9rem;
-  color: #3a5068;
-  line-height: 1.5;
+  color: var(--text-mid);
+  line-height: 1.55;
 }
 
 .learn-tip {
   margin-top: 1.25rem;
-  background: #fffde7;
-  border-left: 4px solid var(--yellow);
+  background: var(--fog);
+  border-left: 3px solid var(--ochre);
   padding: 0.75rem 1rem;
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 var(--radius) var(--radius) 0;
   font-size: 0.92rem;
-  color: #4a3800;
+  color: var(--slate);
   max-width: 560px;
   line-height: 1.5;
 }
@@ -209,13 +214,14 @@
 }
 
 .bait-card {
-  background: white;
+  background: var(--card-bg);
   border-radius: var(--radius);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  border-top: 5px solid var(--bcolor);
+  border-top: 3px solid var(--bcolor);
 }
 
 .bait-header {
@@ -225,10 +231,7 @@
   padding: 1rem 1.1rem 0.5rem;
 }
 
-.bait-emoji {
-  font-size: 2.5rem;
-  flex-shrink: 0;
-}
+.bait-emoji { font-size: 2.5rem; flex-shrink: 0; }
 
 .bait-header h2 {
   font-size: 1.1rem;
@@ -238,7 +241,7 @@
 
 .bait-tagline {
   font-size: 0.82rem;
-  color: #5a7185;
+  color: var(--text-mid);
 }
 
 .bait-pros {
@@ -252,29 +255,28 @@
 
 .bait-pros li {
   font-size: 0.87rem;
-  color: #3a5068;
+  color: var(--text-mid);
   line-height: 1.4;
 }
 
 .bait-howto {
   margin: 0 1.1rem 0.5rem;
-  background: #f5f5f5;
-  border-radius: 10px;
+  background: var(--fog);
+  border-radius: var(--radius);
   padding: 0.6rem 0.8rem;
   font-size: 0.85rem;
-  color: #3a5068;
+  color: var(--text-mid);
   line-height: 1.45;
 }
 
 .bait-best {
   margin: 0 1.1rem 1.1rem;
   font-size: 0.85rem;
-  color: var(--blue-dark);
+  color: var(--evergreen);
   font-weight: 600;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 @media (max-width: 480px) {
-  .bait-grid {
-    grid-template-columns: 1fr;
-  }
+  .bait-grid { grid-template-columns: 1fr; }
 }

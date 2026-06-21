@@ -4,62 +4,108 @@
   padding: 0;
 }
 
+/* ── Design system ── */
 :root {
-  --blue:    #1e90ff;
-  --blue-dark: #1266cc;
-  --teal:    #00bcd4;
-  --green:   #4caf50;
-  --orange:  #ff6f00;
-  --yellow:  #ffd600;
-  --red:     #f44336;
-  --white:   #ffffff;
-  --bg:      #e8f5fd;
-  --text:    #1a2e45;
-  --card-bg: #ffffff;
-  --shadow:  0 4px 16px rgba(0,0,0,0.10);
-  --radius:  18px;
+  /* Palette */
+  --cream:       #F5EFE3;
+  --fog:         #E8E4DC;
+  --fog-dark:    #D4C9B8;
+  --slate:       #2B3439;
+  --slate-mid:   #4A5A62;
+  --moss:        #5C6E4D;
+  --cedar:       #9B6B43;
+  --evergreen:   #3A4E3F;
+  --salmon:      #C97B63;
+  --ochre:       #C89B3C;
+  --slate-blue:  #4A6572;
+  --white:       #FFFFFF;
+
+  /* Semantic tokens */
+  --bg:          var(--cream);
+  --bg-alt:      var(--fog);
+  --text:        var(--slate);
+  --text-mid:    var(--slate-mid);
+  --border:      var(--fog-dark);
+  --card-bg:     var(--white);
+  --accent:      var(--moss);
+  --accent-warm: var(--cedar);
+
+  /* Legacy aliases — keep working without touching every component */
+  --blue:        var(--slate-blue);
+  --blue-dark:   var(--evergreen);
+  --teal:        var(--slate-blue);
+  --green:       var(--moss);
+  --orange:      var(--cedar);
+  --yellow:      var(--ochre);
+  --red:         #B94040;
+
+  /* Layout */
+  --radius:      8px;
+  --radius-lg:   14px;
+  --shadow:      0 1px 3px rgba(43,52,57,0.07), 0 4px 14px rgba(43,52,57,0.07);
+  --shadow-lg:   0 2px 6px rgba(43,52,57,0.08), 0 8px 28px rgba(43,52,57,0.10);
 }
 
+/* ── Base ── */
 html {
   font-size: 18px;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  font-family: 'Lora', Georgia, serif;
+  background: var(--cream);
+  color: var(--slate);
   min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3 {
-  font-family: 'Fredoka One', cursive;
-  line-height: 1.2;
+/* ── Typography ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--slate);
+}
+
+/* Navigation, labels, buttons, badges — DM Sans */
+nav, button, .btn, label,
+.navbar-logo, .filter-btn, .spot-btn, .pick-btn, .door-cta,
+.spot-section-label, .catch-list li, .facility-badge,
+.safety-steps strong, .pick-level, .pick-rig-name,
+.secondary-link, .filter-btn {
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 a {
-  color: var(--blue);
+  color: var(--moss);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--evergreen);
 }
 
+/* ── Page wrapper ── */
 .page {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 1.5rem 1rem 4rem;
+  padding: 2rem 1.5rem 5rem;
 }
 
+/* ── Buttons ── */
 .btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.6rem;
+  padding: 0.7rem 1.6rem;
   border: none;
-  border-radius: 999px;
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.1rem;
+  border-radius: var(--radius);
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
   cursor: pointer;
   transition: transform 0.12s, box-shadow 0.12s;
   text-decoration: none;
@@ -67,23 +113,23 @@ a:hover {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-lg);
   text-decoration: none;
 }
 
-.btn:active {
-  transform: translateY(0);
-}
+.btn:active { transform: translateY(0); }
 
-.btn-blue   { background: var(--blue);   color: var(--white); }
-.btn-green  { background: var(--green);  color: var(--white); }
-.btn-orange { background: var(--orange); color: var(--white); }
-.btn-teal   { background: var(--teal);   color: var(--white); }
-.btn-yellow { background: var(--yellow); color: var(--text);  }
+.btn-blue   { background: var(--slate-blue); color: var(--white); }
+.btn-green  { background: var(--moss);       color: var(--white); }
+.btn-orange { background: var(--cedar);      color: var(--white); }
+.btn-teal   { background: var(--slate-blue); color: var(--white); }
+.btn-yellow { background: var(--ochre);      color: var(--slate); }
 
+/* ── Card ── */
 .card {
   background: var(--card-bg);
   border-radius: var(--radius);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
   padding: 1.5rem;
 }

@@ -4,22 +4,22 @@
 
 .clam-title {
   font-size: clamp(1.8rem, 6vw, 2.8rem);
-  color: var(--blue-dark);
+  color: var(--slate);
   text-align: center;
 }
 
 .clam-intro {
   text-align: center;
-  color: #5a7185;
+  color: var(--text-mid);
   margin: 0.4rem 0 1.75rem;
   font-size: 1.05rem;
   line-height: 1.5;
 }
 
-/* ── Safety box (most prominent section) ── */
+/* ── Safety box ── */
 .clam-safety {
-  background: #fff3e0;
-  border: 3px solid #e65100;
+  background: #F5EDED;
+  border: 2px solid #8B2020;
   border-radius: var(--radius);
   padding: 1.5rem 1.5rem 1.25rem;
   margin-bottom: 2rem;
@@ -27,13 +27,13 @@
 
 .clam-safety-title {
   font-size: clamp(1.2rem, 4vw, 1.5rem);
-  color: #bf360c;
+  color: #6B1414;
   margin-bottom: 0.75rem;
 }
 
 .clam-safety-desc {
   font-size: 0.95rem;
-  color: #4a2800;
+  color: var(--slate);
   line-height: 1.6;
   margin-bottom: 1.1rem;
 }
@@ -49,10 +49,11 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background: #e65100;
-  color: white;
+  background: #8B2020;
+  color: var(--cream);
   padding: 0.7rem 1.25rem;
   border-radius: 999px;
+  font-family: 'DM Sans', system-ui, sans-serif;
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
@@ -64,14 +65,14 @@
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(0,0,0,0.2);
   text-decoration: none;
-  color: white;
+  color: var(--cream);
 }
 
 .clam-safety-rule {
   font-size: 0.92rem;
-  color: #bf360c;
-  background: rgba(230, 81, 0, 0.08);
-  border-radius: 10px;
+  color: #6B1414;
+  background: rgba(139, 32, 32, 0.08);
+  border-radius: var(--radius);
   padding: 0.6rem 0.9rem;
   line-height: 1.5;
 }
@@ -87,6 +88,7 @@
 .clam-card {
   background: var(--card-bg);
   border-radius: var(--radius);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
   overflow: hidden;
   display: flex;
@@ -94,8 +96,8 @@
 }
 
 .clam-card-header {
-  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 60%, white));
-  color: white;
+  background: var(--evergreen);
+  color: var(--cream);
   padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
@@ -113,7 +115,7 @@
 
 .clam-where {
   font-size: 0.85rem;
-  opacity: 0.9;
+  opacity: 0.82;
   margin-top: 0.1rem;
 }
 
@@ -127,13 +129,13 @@
 
 .clam-section h3 {
   font-size: 0.95rem;
-  color: var(--blue-dark);
+  color: var(--slate);
   margin-bottom: 0.3rem;
 }
 
 .clam-section p {
   font-size: 0.92rem;
-  color: #3a5068;
+  color: var(--text-mid);
   line-height: 1.5;
 }
 
@@ -146,32 +148,35 @@
 
 .clam-facts li {
   font-size: 0.87rem;
-  color: #3a5068;
+  color: var(--text-mid);
   line-height: 1.45;
 }
 
 .clam-limit {
-  background: #fffde7;
-  border-radius: 10px;
+  background: var(--fog);
+  border-left: 3px solid var(--ochre);
+  border-radius: 0 var(--radius) var(--radius) 0;
   padding: 0.5rem 0.75rem;
   font-size: 0.85rem;
-  color: #4a3800;
+  color: var(--slate);
   line-height: 1.45;
 }
 
 .clam-license {
-  background: #e8f5fd;
-  border-radius: 10px;
+  background: var(--fog);
+  border-left: 3px solid var(--slate-blue);
+  border-radius: 0 var(--radius) var(--radius) 0;
   padding: 0.5rem 0.75rem;
   font-size: 0.85rem;
-  color: #1a3a55;
+  color: var(--slate);
   line-height: 1.45;
 }
 
 /* ── License section ── */
 .clam-license-note {
-  background: white;
+  background: var(--card-bg);
   border-radius: var(--radius);
+  border: 1px solid var(--border);
   box-shadow: var(--shadow);
   padding: 1.5rem 1.75rem;
   margin-bottom: 1.75rem;
@@ -179,7 +184,7 @@
 
 .clam-license-note-title {
   font-size: 1.3rem;
-  color: var(--blue-dark);
+  color: var(--slate);
   margin-bottom: 0.9rem;
 }
 
@@ -193,42 +198,45 @@
 
 .clam-license-list li {
   font-size: 0.95rem;
-  color: #2c4a62;
+  color: var(--slate-mid);
   line-height: 1.5;
 }
 
 .clam-license-list a {
-  color: var(--blue);
+  color: var(--moss);
   font-weight: 700;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 .clam-license-note-sub {
   font-size: 0.85rem;
-  color: #7a90a8;
+  color: var(--text-mid);
   line-height: 1.5;
 }
 
 .clam-license-note-sub a {
-  color: var(--blue);
+  color: var(--moss);
 }
 
 /* ── WDFW note ── */
 .clam-wdfw-note {
-  background: #fff3e0;
-  border: 2px solid #ff6f00;
-  border-radius: var(--radius);
+  background: var(--fog);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--cedar);
+  border-radius: 0 var(--radius) var(--radius) 0;
   padding: 1rem 1.25rem;
   display: flex;
   gap: 0.75rem;
   align-items: flex-start;
   font-size: 0.92rem;
-  color: #4a2800;
+  color: var(--slate);
   line-height: 1.55;
 }
 
 .clam-wdfw-note a {
-  color: var(--orange);
+  color: var(--cedar);
   font-weight: 700;
+  font-family: 'DM Sans', system-ui, sans-serif;
 }
 
 @media (max-width: 480px) {
