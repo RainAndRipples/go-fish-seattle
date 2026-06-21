@@ -4,16 +4,30 @@
 A free, kid-friendly website teaching kids ages 8–10 how to start fishing in the Seattle metro area. Built by a beginner, deployed for free on Vercel.
 
 ## Status (keep updated as we go)
-- v2 deployed and live on Vercel at https://go-fish-seattle.vercel.app
+- v3 deployed and live on Vercel at https://go-fish-seattle.vercel.app
 - Pipeline: GitHub repo (RainAndRipples/go-fish-seattle) → Vercel auto-deploys on every push
-- Pages done: Home, Learn to Fish, Fishing Spots (12 spots), Fish ID (with photos), Rules for Kids, Where Should I Fish Today?, Clams & Shellfish, Parent's Guide
-- Features done: Suggest a Spot mailto link, licensing section + footer, site-wide footer
+- Pages done: Home (two-door adventure design), Learn to Fish, Lakes & Rivers (22 WDFW-verified King County spots), Puget Sound (5 piers + 3 beaches + shellfish safety), Fish ID (with photos), Rules for Kids, Where Should I Fish Today? (rebuilt recommendation engine), Clams & Shellfish (legacy), Parent's Guide
+- Features done: Freshwater/saltwater domain split, 22 lake cards with region filter + Google Maps + WDFW rules links, NOAA live tide widget on Sound page, DOH shellfish safety section with hotline + color guide, recommendation engine with rig suggestions (beginner/intermediate level badges), Suggest a Spot mailto, licensing section + footer, pre-rendering + SEO (react-helmet-async), Open Graph tags, sitemap.xml, robots.txt
+
+## Routing
+- / → Home (two-door: Lakes & Rivers / Puget Sound)
+- /lakes → FreshwaterSpots (22 spots, replaces old /spots)
+- /sound → PugetSound (piers, beaches, shellfish)
+- /weather → WeatherFish (rebuilt recommendation engine)
+- /learn, /fish-id, /rules, /parents → unchanged
+- /spots, /clams → legacy routes kept for backwards compatibility
+
+## NEVER do this
+- Never display open/closed or allowed/not-allowed status on any page. We recommend; WDFW confirms.
+- Never hardcode regulations, prices, seasons, or open/closed status — state stable facts only and link to official sources (wdfw.wa.gov, fishhunt.wa.gov, WA DOH shellfish map)
+- Never include rivers or creeks as recommended fishing spots without WDFW verification — salmon habitat closures apply
 
 ## Conventions
 - Git identity: name "RainAndRipples", email 219553671+RainAndRipples@users.noreply.github.com — never my real name or personal email in commits, code, or site content
 - Commit and push after each completed task
 - Kid content at 3rd-grade reading level; mobile-first, big text, big buttons
 - Never hardcode regulations, prices, seasons, or open/closed status — state stable facts only and link to official sources (wdfw.wa.gov, fishhunt.wa.gov, WA DOH shellfish map)
+- Rig suggestions use beginner/intermediate level badges (🟢/🟡); never claim a rig is the only option
 
 ## Audience
 - Primary: kids ages 8–10 (reading level ~3rd grade)
